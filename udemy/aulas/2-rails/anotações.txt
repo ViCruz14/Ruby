@@ -1,0 +1,43 @@
+Fluxo do MVC
+Browser -> URL -> controller -> Model -> Database
+                             -> Template -> View
+
+padrão das rotas = controller#action
+
+no rails o orm é o activeRecords
+
+rails s -> de server, para iniciar o server
+rails new app -> criar aplicação
+rails generate controller nome -> criar controller
+rails generate scaffold Tabela chave:tipo -> gera tudo relacionado a uma Tabela
+rails generate migration nome -> criar arquivo de migration
+rails db:migrate -> Realizar as migrações ainda não realizadas
+rails db:rollback -> Desfaz a última migração
+rails routes -> listar todas as rotas --expanded pra ficar bonitinho
+rails c -> de console, para iniciar o console
+
+CREATE (console)
+    Classe_do_model.create(coluna: "valor", coluna2: "valor2")
+    article = Article.new / article.title = 'second title' / article.save
+    article = Article.new(title: 'blah', description: 'blahblah') /  article.save
+
+READ (console)
+    Classe_do_model.find(id) -> colocando em uma variavel podemos acessar as propriedades com getters. ex: article.title
+    Classe_do_model.first
+    Classe_do_model.last
+    Classe_do_model.all
+
+UPDATE (console)
+    article.descritption = 'updated article description' / article.save
+
+DELETE (console)
+    article.destroy
+
+Essas coisas no console são sem validations (pode adicionar com campos vazios por exemplo).
+Pra validar usamos o model
+
+Article.errors -> mostrar erros. Article.errors.full_messages pra aparecer bonitinho
+
+bybug para debugar
+
+render plain pode ser usado pra debugar também, mostra as variaveis no browser

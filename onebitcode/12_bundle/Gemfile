@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+# onde o bundle deve procurar
+
+gem 'os'
+
+# criar gemfile
+# gem install bundler
+#rodar bundle install pra instalar todas as gems aqui
